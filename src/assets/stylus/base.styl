@@ -1,0 +1,78 @@
+@media (-webkit-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
+  .border-1px
+    &::after
+      -webkit-transform: scaleY(0,7)
+      transform: scaleY(0.7)
+
+@media (-webkit-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+  .border-1px
+    &::after
+      -webkit-transform: scaleY(0,5)
+      transform: scaleY(0.5)
+
+@media (-webkit-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)
+  .border-top-1px
+    &::before
+      -webkit-transform: scaleY(0,7)
+      transform: scaleY(0.7)
+
+@media (-webkit-device-pixel-ratio: 2),(min-device-pixel-ratio: 2)
+  .border-top-1px
+    &::before
+      -webkit-transform: scaleY(0,5)
+      transform: scaleY(0.5)
+
+.clearfix
+  display : inline-block
+  &:after
+    content: " "
+    display : block
+    height: 0
+    line-height : 0
+    clear: both
+    visibility : hidden
+border-1px($color)
+  position: relative
+  &:after
+    display: block
+    position: absolute
+    width: 100%
+    left: 0
+    bottom: 0
+    border-top: 1px solid $color
+    content: " "
+
+border-top-1px($color)
+  position: relative
+  &:before
+    display: block
+    position: absolute
+    width: 100%
+    left: 0
+    top: 0
+    border-top: 1px solid $color
+    content: " "
+border-null()
+  &:after
+    display : none
+
+bg-image($url)
+  background-image: url($url + "@2x.png")
+  @media (-webkit-device-pixel-ratio: 1),(min-device-pixel-ratio: 1)
+    background-image: url($url + "@1x.png")
+  @media (-webkit-device-pixel-ratio: 3),(min-device-pixel-ratio: 3)
+    background-image: url($url + "@3x.png")
+
+.q-tabs-head
+  font-size 0.6rem
+.q-item
+  font-size 0.8rem
+.q-tab.icon-and-label
+  padding: 0;
+  min-height: 42px
+.q-tab > .q-icon + .q-tab-label
+  margin-top 0
+  font-size 0.6rem
+.btn-full
+  display block
+  width 100%
