@@ -9,38 +9,31 @@
       <div v-else>
         <q-toolbar color="primary">
           <q-icon name="account_circle" />
-          <q-btn >
+          <span>
             18600557240  币行
-          </q-btn>
+          </span>
         </q-toolbar>
       </div>
 
       <q-list separator link no-border class="bg-white">
         <q-item>
           <q-item-side icon="perm_identity" color="grey-6" />
-          <q-item-main @click="$router.push('identity')">
+          <q-item-main @click="$router.push('profile')">
             <q-item-tile label>我的账户</q-item-tile>
           </q-item-main>
           <q-item-side right icon="chevron_right" />
         </q-item>
         <q-item>
           <q-item-side icon="home" color="grey-6" />
-          <q-item-main>
+          <q-item-main @click="$router.push('identity')">
             <q-item-tile label>身份认证</q-item-tile>
           </q-item-main>
           <q-item-side right icon="chevron_right" />
         </q-item>
         <q-item>
           <q-item-side icon="help" color="grey-6" />
-          <q-item-main>
+          <q-item-main @click="$router.push('secure')">
             <q-item-tile label>安全中心</q-item-tile>
-          </q-item-main>
-          <q-item-side right icon="chevron_right" />
-        </q-item>
-        <q-item>
-          <q-item-side icon="priority_high" color="grey-6" />
-          <q-item-main>
-            <q-item-tile label>关于</q-item-tile>
           </q-item-main>
           <q-item-side right icon="chevron_right" />
         </q-item>

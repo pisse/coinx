@@ -56,7 +56,7 @@
     </div>
 
     <q-tabs slot="footer" color="dark">
-      <q-route-tab class="text-primary" slot="title"  icon="transform" to="/deal" replace label="交易" />
+      <q-route-tab class="text-white" slot="title"  icon="transform" to="/deal" replace label="交易" />
       <q-route-tab class="text-faded" slot="title" icon="home" to="/market" replace label="更多" />
     </q-tabs>
 

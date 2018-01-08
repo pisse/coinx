@@ -34,10 +34,13 @@ export default new VueRouter({
     { path: '/deal-account', component: load('DealAccount') },
     { path: '/my', component: load('My') },
     { path: '/identity', component: load('Identity') },
+    { path: '/profile', component: load('Profile') },
+    { path: '/secure', component: load('Secure') },
     { path: '/phone', component: load('Phone') },
     { path: '/login', component: load('Login') },
     { path: '/register', component: load('Register') },
     { path: '/market', component: load('Market') },
+    { path: '/orders', component: load('Orders') },
     { path: '/kchart', component: load('Kchart') },
     { path: '/reset-pwd', component: load('ResetPwd') },
 
