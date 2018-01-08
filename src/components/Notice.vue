@@ -1,7 +1,7 @@
 <template>
     <q-layout ref="layout" view="hHh LpR fFf" :right-breakpoint="1100" class="home">
 
-      <q-list highlight inset-separator>
+      <q-list highlight inset-separator class="bg-white">
         <q-item>
           <q-item-side avatar="statics/bit.jpg"/>
           <q-item-main label="不说再见"
@@ -117,6 +117,8 @@ export default {
       bottom -10px
     .q-carousel-dots i
       font-size 0.6rem
+  .q-list
+    border 0
   .market
     .col
       text-align center

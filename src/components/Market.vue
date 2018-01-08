@@ -18,6 +18,12 @@
         </q-btn>
       </q-toolbar>-->
 
+      <q-tabs align="justify" inverted class="market-head bg-white">
+        <q-tab name="xtab-1" default label="ETC/BTC" slot="title" />
+        <q-tab name="xtab-2" label="BTC/USDT" slot="title" />
+        <q-tab name="xtab-3" label="ETC/USDT" slot="title" />
+      </q-tabs>
+
       <div @click="$router.push('kchart')">
         <img class="market-img" src="~statics/market.png" alt="">
       </div>
@@ -25,50 +31,62 @@
         <q-list separator>
           <q-item >
             <q-item-main>
-              <q-item-tile class="text-primary" label lines="1">Coinbase</q-item-tile>
+              <q-item-tile class="text-primary" label lines="1">ETC/BTC</q-item-tile>
               <q-item-tile sublabel lines="2">
-                <span>成交量 25008</span>
+                <span>
+                  24小时成交量 25008
+                </span>
+
               </q-item-tile>
             </q-item-main>
             <q-item-side right>
               <q-item-tile class="upword" stamp><q-icon name="arrow_upward" />15328.91 USD</q-item-tile>
-              <q-item-tile stamp>101313.68 CNY</q-item-tile>
+              <q-item-tile stamp>101313.68 CNY
+                <q-btn color="green" small>
+                  +41.74%
+                </q-btn>
+              </q-item-tile>
+
             </q-item-side>
           </q-item>
           <q-item >
             <q-item-main>
-              <q-item-tile class="text-primary" label lines="1">BitFinex</q-item-tile>
+              <q-item-tile class="text-primary" label lines="1">BTC/USDT</q-item-tile>
               <q-item-tile sublabel lines="2">
-                <span>成交量 25008</span>
+                <span>
+                  24小时成交量 25008
+                </span>
+
               </q-item-tile>
             </q-item-main>
             <q-item-side right>
-              <q-item-tile stamp>15328.91 USD</q-item-tile>
-              <q-item-tile stamp>101313.68 CNY</q-item-tile>
+              <q-item-tile class="upword text-dark" stamp>15328.91 USD</q-item-tile>
+              <q-item-tile stamp>101313.68 CNY
+                <q-btn color="" small>
+                  --
+                </q-btn>
+              </q-item-tile>
+
             </q-item-side>
           </q-item>
           <q-item >
             <q-item-main>
-              <q-item-tile class="text-primary" label lines="1">Kraken</q-item-tile>
+              <q-item-tile class="text-primary" label lines="1">ETC/USDT</q-item-tile>
               <q-item-tile sublabel lines="2">
-                <span>成交量 25008</span>
+                <span>
+                  24小时成交量 25008
+                </span>
+
               </q-item-tile>
             </q-item-main>
             <q-item-side right>
-              <q-item-tile stamp class="downward"><q-icon name="arrow_downward" />15328.91 USD</q-item-tile>
-              <q-item-tile stamp>101313.68 CNY</q-item-tile>
-            </q-item-side>
-          </q-item>
-          <q-item >
-            <q-item-main>
-              <q-item-tile class="text-primary" label lines="1">Bitstamp</q-item-tile>
-              <q-item-tile sublabel lines="2">
-                <span>成交量 25008</span>
+              <q-item-tile class="upword text-red" stamp><q-icon name="arrow_downward" />15328.91 USD</q-item-tile>
+              <q-item-tile stamp>101313.68 CNY
+                <q-btn color="red" small>
+                  +41.74%
+                </q-btn>
               </q-item-tile>
-            </q-item-main>
-            <q-item-side right>
-              <q-item-tile stamp>15328.91 USD</q-item-tile>
-              <q-item-tile stamp>101313.68 CNY</q-item-tile>
+
             </q-item-side>
           </q-item>
         </q-list>
@@ -93,6 +111,7 @@ import {
   QCarousel,
   QPullToRefresh,
   QTabs,
+  QTab,
   QRouteTab,
   QTabPane,
   QLayout,
@@ -120,6 +139,7 @@ export default {
     QCarousel,
     QPullToRefresh,
     QTabs,
+    QTab,
     QRouteTab,
     QTabPane,
     QLayout,
@@ -152,14 +172,17 @@ export default {
 
 <style lang="stylus" scoped="scoped">
  @import '~variables'
- @import '~assets/stylus/base.styl'
 
 .market
   background-color $grey-11
+  .q-tab.active
+    border-bottom 1px solid $primary
+  .q-btn-small
+    min-height 16px
+    padding 0 5px
   .hide
     visibility   hidden
   .market-img
-
     width 100%
     display block
   .list-wrap
