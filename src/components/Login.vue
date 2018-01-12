@@ -154,6 +154,6 @@ export default {
     margin  0 1rem
   .text-btn
     font-size 0.6rem
-    color: $blue-4
+    color: $primary
 
 </style>

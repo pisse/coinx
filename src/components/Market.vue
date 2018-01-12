@@ -28,7 +28,7 @@
         <img class="market-img" src="~statics/market.png" alt="">
       </div>
       <div class="list-wrap" @click="$router.push('kchart')">
-        <q-list separator>
+        <!--<q-list separator>
           <q-item >
             <q-item-main>
               <q-item-tile class="text-primary" label lines="1">ETC/BTC</q-item-tile>
@@ -63,7 +63,7 @@
               <q-item-tile class="upword text-dark" stamp>15328.91 USD</q-item-tile>
               <q-item-tile stamp>101313.68 CNY
                 <q-btn color="" small>
-                  --
+                  &#45;&#45;
                 </q-btn>
               </q-item-tile>
 
@@ -89,7 +89,30 @@
 
             </q-item-side>
           </q-item>
-        </q-list>
+        </q-list>-->
+
+        <div class="row header text-grey-8">
+          <div class="col">币种</div>
+          <div class="col">最新价</div>
+          <div class="col">涨跌幅</div>
+        </div>
+        <div class="content border-top-1px">
+          <div class="row">
+            <div class="col name">ETC/BTC</div>
+            <div class="col text-green">$1313.68</div>
+            <div class="col text-green"><q-icon name="arrow_upward" /> +41.74%</div>
+          </div>
+          <div class="row">
+            <div class="col name">BTC/USDT</div>
+            <div class="col text-red">$101313.68</div>
+            <div class="col text-red"><q-icon name="arrow_downward" /> -11.74%</div>
+          </div>
+          <div class="row">
+            <div class="col name">ETC/USDT</div>
+            <div class="col">$356.68</div>
+            <div class="col">--</div>
+          </div>
+        </div>
       </div>
 
       <q-tabs slot="footer" color="white">
@@ -172,6 +195,7 @@ export default {
 
 <style lang="stylus" scoped="scoped">
  @import '~variables'
+ @import '~assets/stylus/base.styl'
 
 .market
   background-color $grey-11
@@ -187,6 +211,17 @@ export default {
     display block
   .list-wrap
     background-color white
+    text-align center
+    .header
+      margin-top 0.5rem
+      font-size 0.8rem
+      padding 0.5rem 0
+    .content
+      border-top-1px($grey-6)
+      .row
+        padding 0.8rem 0
+        .name
+          font-size 0.8rem
     .q-list
       border 0
     .upword

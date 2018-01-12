@@ -1,9 +1,11 @@
 <template>
     <q-layout ref="layout" view="hHh LpR fFf" :right-breakpoint="1100" class="assets">
+
+
       <q-tabs align="justify" inverted class="deal-action bg-white">
-        <q-tab name="xtab-1" default label="账户" slot="title" />
-        <q-tab name="xtab-2" label="充币" slot="title" />
-        <q-tab name="xtab-3" label="提币" slot="title" />
+        <q-tab name="xtab-1" class="hide" default label="账户" slot="title" />
+      <!--  <q-tab name="xtab-2" label="充币" slot="title" />
+        <q-tab name="xtab-3" label="提币" slot="title" />-->
 
         <q-tab-pane name="xtab-1">
           <div class="assets-list">
@@ -274,6 +276,10 @@
   @import '~variables'
 
   .assets
+    .deal-action .q-tabs-head
+      display none
+    .q-tabs-inverted.q-tabs-position-top .q-tabs-panes
+      border 0
     background-color $grey-11
     .q-tab.active
       border-bottom 1px solid $primary

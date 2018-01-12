@@ -30,28 +30,28 @@
         <div class="col">卖出量</div>
       </div>
       <div class="row deal-table-body bg-dark">
-        <div class="col text-green">0.22</div>
-        <div class="col text-green">15521.00</div>
-        <div class="col text-red">16574.00</div>
-        <div class="col text-red">0.99</div>
+        <div class="col text-green">0.22221</div>
+        <div class="col text-green">15521.22221</div>
+        <div class="col text-red">16574.22221</div>
+        <div class="col text-red">0.22221</div>
       </div>
       <div class="row deal-table-body bg-dark">
-        <div class="col text-green">0.22</div>
-        <div class="col text-green">15521.00</div>
-        <div class="col text-red">16574.00</div>
-        <div class="col text-red">0.99</div>
+        <div class="col text-green">0.22221</div>
+        <div class="col text-green">15521.22221</div>
+        <div class="col text-red">16574.22221</div>
+        <div class="col text-red">0.22221</div>
       </div>
       <div class="row deal-table-body bg-dark">
-        <div class="col text-green">0.22</div>
-        <div class="col text-green">15521.00</div>
-        <div class="col text-red">16574.00</div>
-        <div class="col text-red">0.99</div>
+        <div class="col text-green">0.22221</div>
+        <div class="col text-green">15521.22221</div>
+        <div class="col text-red">16574.22221</div>
+        <div class="col text-red">0.22221</div>
       </div>
       <div class="row deal-table-body bg-dark">
-        <div class="col text-green">0.22</div>
-        <div class="col text-green">15521.00</div>
-        <div class="col text-red">16574.00</div>
-        <div class="col text-red">0.99</div>
+        <div class="col text-green">0.22221</div>
+        <div class="col text-green">15521.22221</div>
+        <div class="col text-red">16574.22221</div>
+        <div class="col text-red">0.22221</div>
       </div>
     </div>
 
